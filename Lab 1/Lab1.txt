@@ -1,0 +1,149 @@
+Sotheanith Sok
+013256189
+Lab 1 Jan 29, 2019
+
+1. Ada 2010
+
+    with Ada.Text_IO;
+
+    procedure Hello is
+    begin
+    Ada.Text_IO.Put_Line("Hello, World!");
+    end Hello;
+
+
+2. BASIC
+
+    10 PRINT "Hello, World!"
+    20 END
+
+
+3. Visual Basic
+
+    Module VBModule
+ 
+        Sub Main()
+            Console.WriteLine("Hello, World!")
+        End Sub
+    
+    End Module
+
+
+4. C (1999)
+
+    #include <stdio.h>
+
+    int main()
+    {
+        printf("Hello, World!\n");
+
+        return 0;
+    }
+
+
+5. C++ (2014)
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main()
+    {
+        cout << "Hello, World!" << endl; 
+        
+        return 0;
+    }
+
+
+6. Cobal 
+
+    IDENTIFICATION DIVISION.
+    PROGRAM-ID. HELLO-WORLD.
+    PROCEDURE DIVISION.
+    DISPLAY 'Hello, World!'.
+    STOP RUN.
+
+
+7. FORTRAN 77
+
+    implicit none
+
+    write ( *, '(a)' ) '  Hello, World!'
+
+    stop
+    end
+
+
+8. FORTRAN 2008
+
+    program hello
+        Print *, "Hello, World!"
+    end program Hello
+
+
+9. JAVA
+
+    public class HelloWorld{
+
+        public static void main(String []args){
+            System.out.println("Hello, World!");
+        }
+    }
+
+
+10. IBM/Intel/Microsoft Assembler (MASM compatible 16-bit DOS i/o)
+
+    .model small
+    .stack
+    .data
+        message   db "Hello, World!", "$"
+    .code
+        main    proc
+            mov   ax,seg message
+            mov   ds,ax
+            mov   ah,09
+            lea   dx,message
+            int   21h
+            
+            mov   ax,4c00h
+            int   21h
+        main    endp
+    end main
+
+
+11. Ook!
+
+    Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+    Ook. Ook. Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+    Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook? Ook! Ook! Ook? Ook! Ook? Ook.
+    Ook! Ook. Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+    Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook?
+    Ook! Ook! Ook? Ook! Ook? Ook. Ook. Ook. Ook! Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+    Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook! Ook. Ook! Ook. Ook. Ook. Ook. Ook.
+    Ook. Ook. Ook! Ook. Ook. Ook? Ook. Ook? Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook.
+    Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook.
+    Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook? Ook! Ook! Ook? Ook! Ook? Ook. Ook! Ook.
+    Ook. Ook? Ook. Ook? Ook. Ook? Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+    Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook! Ook? Ook? Ook. Ook. Ook.
+    Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+    Ook. Ook? Ook! Ook! Ook? Ook! Ook? Ook. Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook.
+    Ook? Ook. Ook? Ook. Ook? Ook. Ook? Ook. Ook! Ook. Ook. Ook. Ook. Ook. Ook. Ook.
+    Ook! Ook. Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook.
+    Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook! Ook!
+    Ook! Ook. Ook. Ook? Ook. Ook? Ook. Ook. Ook! Ook.
+
+
+12. Pascal
+
+    Program HelloWorld(output);
+    begin
+    writeln('Hello, World!');
+    end.
+
+
+13. SQL
+
+    BEGIN
+    dbms_output.put_line ('Hello, World!');
+    END:
+    /
