@@ -1,0 +1,31 @@
+/*  this program computes gross pay.
+Hours up to 40 are regular hourly wage
+and hours over 40 are paid double the
+regular hourly wage.
+*/
+BEGIN
+PRINTLN "Calculate Payroll - Double Pay Overtime"
+INTEGER rate, hours, overtime_hours
+LET rate = 18
+LET hours = 40
+LET overtime_hours = 5
+PRINT "Rate = "
+PRINTLN rate
+PRINT "Hours = "
+PRINTLN hours
+PRINT "Base pay = "
+INTEGER base_pay, overtime_pay
+LET base_pay = rate * hours
+PRINTLN base_pay
+//compute overtime
+PRINT "Overtime hours = "
+PRINTLN overtime_hours
+LET overtime_pay = overtime_hours * rate * 2
+PRINT "Overtime pay = "
+PRINTLN overtime_pay
+//compute net pay
+INTEGER netpay
+LET netpay = base_pay + overtime_pay
+PRINT "Your net pay = "
+PRINTLN netpay
+END
