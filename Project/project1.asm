@@ -3,59 +3,139 @@ INCLUDE pcmac.inc
 .stack 100h
 .data
     p0 db "CECS 524 Function Solver",13,10,"$"
-    p1 db "1. Fibonacci",13,10,"2. Ackerman",13,10,"0. Quit","Enter choice:","$"
+    p1 db "1. Fibonacci",13,10,"2. Ackerman",13,10,"0. Quit",13,10,"Enter choice:","$"
+    p2 db "Enter n:","$"
+    p3 db "Fib(","$"
+    p4 db ")=","$"
+    p5 db "Enter x:","$"
+    p6 db "Enter y:","$"
+    p7 db "Ack(","$"
+    p8 db ")=","$"
+    
     
     M32768  db  '-32768$'
 .code
     main proc
         mov ax, @data
         mov ds, ax
-        push bp
-        mov bp,sp
+        push bp ;save base pointer
+        mov bp,sp ;setup local stackframe
         
         call input
         
-        
-        pop bp
+        mov sp, bp ;Destroy local variable
+        pop bp; reset base pointer
         sExit 0
     main endp
     
     
     input proc
-        push bp
-        mov bp, sp
+        push bp ;save base pointer
+        mov bp, sp ;setup stack frame
+        sub sp, 4 ; allocate two slot for local variables
      
         
-prompts:sPutStr p1
-        sPutCh
+    prompts:
+        sPutStr p1
         call getDec
-        call putDec
         
-        
-opt1:   cmp ax, 1
+    opt1:   
+        cmp ax, 1
         jne opt2
         
+        sPutStr p2 ;prompt for input
+        call getDec
+        mov word ptr[bp-2], ax ; save to first local variable
         
-opt2:   cmp ax, 2
+        push word ptr[bp-2] ; a single parameter
+        mov ax, 0   ; set ax to 0 because it will be use to accumulate result
+        call fibonacci ; call fibonacci function
+        
+        push ax ; save return value onto the stack
+        
+        sPutStr p3 ;print prompts
+        mov ax, word ptr[bp-2]
+        call putDec
+        sPutStr p4
+        
+        pop ax ; restore return value back to ax
+        call putDec ;print return value
+        sPutCh 10
+        jmp prompts
+        
+    opt2:   
+        cmp ax, 2
         jne opt3
-    
-opt3:   cmp ax, 0
+        
+        sPutStr p5
+        call getDec
+        mov word ptr[bp-2], ax ; save to first local variable.
+        
+        sPutStr p6
+        call getDec
+        mov word ptr[bp-4],ax ;save to second local variable.
+        
+        push word ptr[bp-2] ; first parameter
+        push word ptr[bp-4] ; second parameter
+        mov ax, 0 ;set return register to 0
+        call ackerman
+        
+        jmp prompts
+    opt3:   
+        cmp ax, 0
         jne prompts
         
-                
         
-done1:  pop bp
-        ret 2
+        mov sp, bp ;Destroy local variables
+        pop bp ;Restore base pointer
+        ret 0 ; return and clear 0 bytes
     input endp
     
     
     ackerman proc
+        push bp ; save base pointer
+        mov bp, sp; set bp to sp
+        
+        mov cx, word ptr [bp+6] ; save first parameter to cx
+        mov dx, word ptr [bp+4] ; save second parameter to dx
     
     ackerman endp
     
     
     fibonacci proc
-    
+        push bp ; save base pointer
+        mov bp,sp ; set bp to sp
+        
+        mov dx, word ptr[bp+4] ; move a single pass in parameter to dx 
+        
+        cmp dx, 0   ; 1st base case when n == 0
+        je done10
+        
+        cmp dx, 1   ; 2nd base case when n == 1
+        je done20
+        
+        mov dx, word ptr[bp+4] ; first recursive call
+        sub dx, 1
+        push dx
+        call fibonacci
+        
+        mov dx, word ptr[bp+4] ; second recursive call 
+        sub dx, 2
+        push dx
+        call fibonacci
+        
+        
+    done10: 
+        add ax, 0
+        mov sp, bp
+        pop bp
+        ret 2
+    done20:
+        add ax,1
+        mov sp, bp
+        pop bp
+        ret 2
+        
     fibonacci endp
     
     
