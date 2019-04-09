@@ -91,8 +91,8 @@ INCLUDE pcmac.inc
         sPutStr p6              ;print sixth prompt
         call getDec             ;get user's input and save it into ax
         mov word ptr[bp-4],ax   ;move ax to the second local variable slot
-        push word ptr[bp-2]     ;save the first local variable onto the stack (Pass by value)
         
+        push word ptr[bp-2]     ;save the first local variable onto the stack (Pass by value)
         push word ptr[bp-4]     ;save the second local variable onto the stack (Pass by value)
         mov ax, 0               ;set ax to 0 because it will be used as a return register
         call ackerman           ;call Ackerman function
