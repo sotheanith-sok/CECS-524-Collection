@@ -1,0 +1,77 @@
+V "GNAT Lib v6"
+M P W=b
+A -mtune=generic
+A -march=i586
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IO
+RV SPARK_05
+
+U distance_to_origin%b	distance_to_origin.adb	6469fb29 NE OO SU KU
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.elementary_functions%s  a-nuelfu.ads  a-nuelfu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20190122163758 3ffc8e18 ada%s
+D a-except.ads		20190122163758 291912d5 ada.exceptions%s
+D a-flteio.ads		20190122163758 e18a47a0 ada.float_text_io%s
+D a-ioexce.ads		20190122163758 e4a01f64 ada.io_exceptions%s
+D a-numeri.ads		20190122163756 bb51c45a ada.numerics%s
+D a-nuelfu.ads		20190122163758 03e83d1c ada.numerics.elementary_functions%s
+D a-ngelfu.ads		20190122163758 b8fdcb46 ada.numerics.generic_elementary_functions%s
+D a-stream.ads		20190122163758 119b8fb3 ada.streams%s
+D a-tags.ads		20190122163758 01f5e3ef ada.tags%s
+D a-textio.ads		20190122163758 386df5d4 ada.text_io%s
+D a-tiflio.ads		20190122163758 56fbda09 ada.text_io.float_io%s
+D a-unccon.ads		20190122163758 f9eb8f06 ada.unchecked_conversion%s
+D distance_to_origin.adb  20190425193428 be667441 distance_to_origin%b
+D interfac.ads		20190122163758 4be8ce1b interfaces%s
+D i-cstrea.ads		20190122163758 e53d8b8e interfaces.c_streams%s
+D system.ads		20190122163758 2da59038 system%s
+D s-crtl.ads		20190122163758 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190122163756 54135002 system.exception_table%s
+D s-ficobl.ads		20190122163756 078245e4 system.file_control_block%s
+D s-parame.ads		20190122163758 7e2a0d7f system.parameters%s
+D s-soflin.ads		20190122163758 14e1eb6c system.soft_links%s
+D s-stache.ads		20190122163758 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190122163758 09bd3940 system.standard_library%s
+D s-stoele.ads		20190122163758 2dc34a04 system.storage_elements%s
+D s-traent.ads		20190122163756 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190122163758 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20190122163758 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 13|1r6 2r6 3r6 4r6 16r17 17r17 18r17 19r17 21r17 22r17 23r17
+X 3 a-flteio.ads
+20K13*Float_Text_IO[11|46] 13|2w10 17r21 19r21 22r21
+X 5 a-numeri.ads
+16K13*Numerics 32e17 13|3r10 4r10
+X 6 a-nuelfu.ads
+18K22*Elementary_Functions[7|39] 13|3w19 4r19
+X 7 a-ngelfu.ads
+42V13*Sqrt{float} 13|20s29[6|18]
+X 10 a-textio.ads
+49K13*Text_IO 471e16 13|1w10 16r21 18r21 21r21 23r21
+73I12*Field{integer}
+166U14*New_Line 13|23s29
+242U14*Put 13|16s29 18s29 21s29
+242a19 Item{string} 13|16r33 18r33 21r33
+X 11 a-tiflio.ads
+57U14*Get 13|17s35[3|20] 19s35[3|20]
+58f7 Item{float} 13|17r39[3|20] 19r39[3|20]
+68U14*Put 13|22s35[3|20]
+69f7 Item{float} 13|22r39[3|20]
+70i7 Fore{10|73I12} 13|22r57[3|20]
+71i7 Aft{10|73I12} 13|22r66[3|20]
+72i7 Exp{10|73I12} 13|22r73[3|20]
+X 13 distance_to_origin.adb
+6U11*Distance_to_Origin 6b11 24l13 24t31
+7R14 Point 10e19 12r18
+8f17 X{float} 17m54 20r41
+9f17 Y{float} 19m54 20r57
+12r9 Point1{7R14} 17m47 17r47 19m47 19r47 20r34 20r50
+13f9 Distance{float} 20m17 22r47
+

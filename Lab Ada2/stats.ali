@@ -1,0 +1,83 @@
+V "GNAT Lib v6"
+M P W=b
+A -mtune=generic
+A -march=i586
+P ZX
+
+RN
+RV NO_IO
+
+U stats%b		stats.adb		f7195453 NE OO SU KU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20190122163758 3ffc8e18 ada%s
+D a-except.ads		20190122163758 291912d5 ada.exceptions%s
+D a-inteio.ads		20190122163758 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20190122163758 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190122163758 119b8fb3 ada.streams%s
+D a-tags.ads		20190122163758 01f5e3ef ada.tags%s
+D a-textio.ads		20190122163758 386df5d4 ada.text_io%s
+D a-tiinio.ads		20190122163758 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20190122163758 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20190122163758 4be8ce1b interfaces%s
+D i-cstrea.ads		20190122163758 e53d8b8e interfaces.c_streams%s
+D stats.adb		20190430194412 393f2823 stats%b
+D system.ads		20190122163758 2da59038 system%s
+D s-crtl.ads		20190122163758 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190122163756 54135002 system.exception_table%s
+D s-ficobl.ads		20190122163756 078245e4 system.file_control_block%s
+D s-parame.ads		20190122163758 7e2a0d7f system.parameters%s
+D s-soflin.ads		20190122163758 14e1eb6c system.soft_links%s
+D s-stache.ads		20190122163758 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190122163758 09bd3940 system.standard_library%s
+D s-stoele.ads		20190122163758 2dc34a04 system.storage_elements%s
+D s-traent.ads		20190122163756 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190122163758 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20190122163758 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 12|1r6 2r6 54r9 55r9 63r7 64r7 65r7 66r7 67r7 68r7 69r7 70r7
+. 71r7 75r4 76r4 78r7 79r7
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 12|2w10 54r13 64r11 67r11 70r11 79r11
+X 7 a-textio.ads
+49K13*Text_IO 471e16 12|1w10 55r13 63r11 65r11 66r11 68r11 69r11 71r11 75r8
+. 76r8 78r11
+73I12*Field{integer}
+166U14*New_Line 12|55s21 65s19 68s19 71s19 76s16
+242U14*Put 12|63s19 66s19 69s19 75s16 78s19
+242a19 Item{string} 12|63r23 66r23 69r23 75r20 78r23
+X 8 a-tiinio.ads
+56U14*Get 12|79s27[3|18]
+57i7 Item{integer} 12|79r31[3|18]
+66U14*Put 12|54s29[3|18] 64s27[3|18] 67s27[3|18] 70s27[3|18]
+67i7 Item{integer} 12|54r34[3|18] 64r31[3|18] 67r31[3|18] 70r31[3|18]
+68i7 Width{7|73I12} 12|54r48[3|18] 64r44[3|18] 67r45[3|18] 70r45[3|18]
+X 12 stats.adb
+4U11*Stats 4b11 83l5 83t10
+5i4 MaxItems{positive} 6r41
+6I12 MyRange{positive} 7r27 18r16 32r14 43r14 53r14 77r13
+7A9 IntArray(natural)<integer> 8r14 11r26 27r21 39r21 51r31 59r28
+8a4 Numbers{7A9} 62r22 79m39 79r39 82r13
+9i4 Avg{natural} 62m7 64r39
+11V13 Average{natural} 11b13 11>22 24l8 24t15 62s14
+11a22 N{7A9} 19r23
+12i7 Sum{natural} 15m7 19m10 19r17 22m7 22r14 23r14
+13i7 Count{natural} 16m7 20m10 20r19 22r20
+18i11 I{6I12} 19r25
+27V13 Min{natural} 27b13 27>19 36l8 36t11 67s37
+27a19 N{7A9} 30r22 33r12 33r55
+28i5 MinimumNumber{natural} 30m5 33r19 33m38 35r12
+32i9 I{6I12} 33r14 33r57
+39V13 Max{natural} 39b13 39>19 47l9 47t12 70s37
+39a19 N{7A9} 42r22 44r12 44r54
+40i5 MaximumNumber{natural} 42m5 44r19 44m38 46r12
+43i9 I{6I12} 44r14 44r56
+51U14 PrintArray 51b14 51>27 57l8 57t18 61s7
+51a27 N{7A9} 54r42
+53i9 I{6I12} 54r44
+59U14 PrintAll 59b14 59>24 72l8 72t16 82s4
+59a24 N{7A9} 61r18 67r41 70r41
+77i8 I{6I12} 79r47
+
