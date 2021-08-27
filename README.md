@@ -11,7 +11,7 @@ A collection of assignments for the CECS 524 class.
  - [ANTLR](https://www.antlr.org/)
  - [Ada](https://en.wikipedia.org/wiki/Ada_(programming_language))
 
-## Author
+## Authors
  - [Sotheanith Sok](https://github.com/sotheanith)
 
 ## Course
