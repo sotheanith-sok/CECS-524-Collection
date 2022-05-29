@@ -12,7 +12,7 @@ A collection of assignments for the CECS 524 class.
  - [Ada](https://en.wikipedia.org/wiki/Ada_(programming_language))
 
 ## Authors
- - [Sotheanith Sok](https://github.com/sotheanith)
+ - [Sotheanith Sok](https://github.com/sotheanith-sok)
 
 ## Course
  - [CECS 524 - Advanced Topics in Programming Languages](http://catalog.csulb.edu/preview_course_nopop.php?catoid=5&coid=40027)
